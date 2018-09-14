@@ -1,0 +1,21 @@
+  {
+    "manifest_version": 2,
+  	"name": "ArchAlert",
+  	"version": "1.0",
+  	"description": "Get exagerated alerts for new Archipelago alerts!",
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title" : "Click here!"
+    },
+  	"content_scripts": [
+  		{
+  			"matches": ["*://archipelago.comp.nus.edu.sg/*"],
+  			"js": ["content.js"],
+        "css": ["blinker.css"],
+  			"run_at": "document_end"
+  		}
+  	],
+    "web_accessible_resources": [
+       "alarm.mp3"
+   ]
+  }
